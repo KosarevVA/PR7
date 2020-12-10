@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>12</title>
+</head>
+<body>
+<ul class="tree" id="tree">
+    <li>Main
+        <ul>
+            <li>subparagraph 1
+                <ul>
+                    <li>a</li>
+                    <li>b</li>
+                    <li>c</li>
+                </ul>
+            </li>
+            <li>subparagraph 2
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Main 2
+        <ul>
+            <li>subparagraph 2
+                <ul>
+                    <li>----</li>
+                    <li>++++</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<script>
+    for (let li of tree.querySelectorAll('li')) {
+      var span = document.createElement('span');
+      li.prepend(span);
+      span.append(span.nextSibling);
+    }
+    tree.onclick = function(event) {
+      if (event.target.tagName != 'SPAN') {
+        return;
+      }
+      var childrenContainer = event.target.parentNode.querySelector('ul');
+      if (!childrenContainer) return;
+      childrenContainer.hidden = !childrenContainer.hidden;
+    }
+  </script>
+</body>
+</html>

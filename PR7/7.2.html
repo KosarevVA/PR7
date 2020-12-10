@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>2</title>
+</head>
+<body>
+
+<button onclick="buttonClick()">Нажми на меня</button>
+<input type="text" id="input" value="пендосы">
+<p>
+    <button onclick="buttonClick1()">Нажми на меня</button>
+    <img id="foto" src="https://avatars.mds.yandex.net/get-zen_doc/1668923/pub_5d656798ac412400aeb2cd22_5d656e04f557d000ac9511fd/scale_1200" style="width: 150px; height: 150px;" >
+</p>
+<script>
+			function buttonClick() {
+			var input = document.getElementById('input');
+			input.value = 'русские';
+			}
+			</script>
+<script >
+			function buttonClick1() {
+			var img = document.getElementById('foto');
+			img.src = 'https://7themes.su/php/imres/resize.php?width=1920&height=1200&cropratio=16:10&image=/_ph/56/932340284.jpg';
+			}
+			</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+<body>
+<input type="text" value="Нажимать сюда не надо" style="width: 100px" id = "input">
+<br>
+<br>
+<button onclick="buttonClick()">Нажми на меня</button>
+<button onclick="button1Click()">Нажми на меня</button>
+<button onclick="button2Click()">Потом на меня</button>
+<script>
+			function buttonClick(elem){
+			var elem = document.getElementById('input');
+			elem.value = 'Поменял свой текст и css!';
+			elem.style.width = '250px';
+			elem.style.height = '50px';
+			elem.style.color = 'blue';
+			elem.style.borderRadius = '10px';
+			}
+
+			function button1Click(elem){
+			var elem = document.getElementById('input');
+			elem.style.display = 'none';
+			}
+
+			function button2Click(elem){
+			var elem = document.getElementById('input');
+			elem.style.display = 'inline';
+			}
+			</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>15</title>
+    <style>
+#largeImg {
+  border: solid 1px #ccc;
+  width: 550px;
+  height: 400px;
+}
+#thumbs {
+  margin: 0;
+  padding: 0;
+}
+#thumbs a {
+  margin: 2px;
+  float: left;
+}
+#thumbs a:hover {
+  border: 1px solid  #FF9900;
+}
+#thumbs li {
+  list-style: none;
+}
+img{
+width: 100px;
+height: 100px;
+}
+</style>
+</head>
+<body>
+<p><img id="largeImg" src="polo.jpg"  alt="Large image"></p>
+<ul id="thumbs">
+    <li>
+        <a href="polo.jpg" title="Image 2"><img src="polo.jpg"></a>
+    </li>
+    <li>
+        <a href="bmw.jpg" title="Image 3"><img src="bmw.jpg"></a>
+    </li>
+    <li>
+        <a href="reno.jpg" title="Image 4"><img src="reno.jpg"></a>
+    </li>
+    <li>
+        <a href="audi.jpg" title="Image 5"><img src="audi.jpg"></a>
+    </li>
+    <li>
+        <a href="kia.jpg" title="Image 6"><img src="kia.jpg"></a>
+    </li>
+</ul>
+<script>
+    thumbs.onclick = function(event) {
+      let thumbnail = event.target.closest('a');
+      if (!thumbnail) return;
+      showThumbnail(thumbnail.href, thumbnail.title);
+      event.preventDefault();
+    }
+    function showThumbnail(href, title) {
+      largeImg.src = href;
+      largeImg.alt = title;
+    }
+  </script>
+</body>
+</html>
